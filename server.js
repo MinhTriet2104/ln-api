@@ -21,6 +21,8 @@ app.use(express.json({ extended: true }));
 
 // Router
 const tagRouter = require("./routes/tag");
+const authorRouter = require("./routes/author");
+const artistRouter = require("./routes/artist");
 
 // Routes
 app.get("/", (req, res) => {
@@ -28,6 +30,8 @@ app.get("/", (req, res) => {
 });
 
 app.use("/tag", tagRouter);
+app.use("/author", authorRouter);
+app.use("/artist", artistRouter);
 
 // Not found route
 app.get("*", (req, res) => res.status(404).send("404 Not Found"));

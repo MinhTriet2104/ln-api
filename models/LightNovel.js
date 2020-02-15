@@ -37,6 +37,11 @@ const LNSchema = new mongoose.Schema(
       required: true,
       ref: "Author"
     },
+    artist: {
+      type: mongoose.Schema.Types.ObjectId,
+      required: true,
+      ref: "Artist"
+    },
     translationTeam: {
       type: [
         {
